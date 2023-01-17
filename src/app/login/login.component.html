@@ -1,0 +1,16 @@
+<div class="container-full">
+    <form [formGroup]="LoginForm" (ngSubmit)="loginUser()" id="loginBox">
+        <h1>Login</h1>
+        <div class="form-group">
+            <label for="username">UserName</label>
+            <input type="text" placeholder="Enter Username" name="username" formControlName="USERNAME" required >
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter Password" name="password" formControlName="PASSWORD"  required>
+        </div>
+        <a href="forgot-password" style="text-align: right;">Forgot Password?</a>
+        <button id="submitButton">Login</button>
+        <a routerLink="/register">Register</a>
+    </form>
+</div>

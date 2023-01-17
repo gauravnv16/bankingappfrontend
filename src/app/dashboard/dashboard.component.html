@@ -1,0 +1,35 @@
+<nav class="dashboard-nav">
+   <h1>GBANK</h1>
+   <span>
+       <span>
+        <a routerLink="/dashboard">Dashboard</a>
+        <a routerLink="/transfer">Transfer</a>
+        <a routerLink="/transactions">Transactions</a>
+        <a routerLink="/profile">Profile</a>
+        <button id="logoutButton" (click)="logOut()">Logout</button>
+       </span>
+   </span>
+</nav>
+
+<!-- <h1>Dashboard</h1> -->
+<header class="header">
+    <h1>Welcome {{ user.USERNAME }}</h1>
+    <div class="header__balance">
+        <h2>Balance</h2>
+        <h2>
+            <!-- rupee icon -->
+            &#8377;
+            {{details.BALANCE}}
+        </h2>
+    </div>
+    <button style="justify-self: right ;">
+        <a routerLink="/transfer">Add Funds</a>
+    </button>
+</header>
+
+<button class="statementButton">
+    <i class="fa fa-file"></i>
+    Statement
+</button>
+
+

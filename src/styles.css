@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container-full{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-full form{
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.container-full form h1{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.container-full form label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+.container-full form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container-full form button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ddd;
+    font-size: 14px;
+    cursor: pointer;
+}
+.container-full form a{
+    display: block;
+    margin:10px 0px;
+    font-size: 12px;
+}
