@@ -1,0 +1,140 @@
+<div class="admin">
+    <div class="ui animated button" tabindex="0">
+        <div class="visible content">
+            Back
+        </div>
+        <div class="hidden content">
+            <a routerLink="/dashboard">
+                <i class="left arrow icon"></i>
+            </a>
+          
+        </div>
+      </div>
+    
+    <div class="ui card" style="width: fit-content;">
+        <div class="content">
+          <div class="header">ADMIN</div>
+          <div class="meta">
+            <span class="category">Users</span>
+          </div>
+          <div class="description">
+            <table class="ui compact celled definition table">
+                <thead class="full-width">
+                  <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>E-mail address</th>
+                    <th>IS APPROVED</th>
+                  </tr>
+                </thead>
+                <tbody  *ngFor="let user of users">
+                  <tr>
+                    <td class="collapsing">
+                      <div class="ui fitted slider checkbox">
+                        <input type="checkbox"> <label></label>
+                      </div>
+                    </td>
+                    <td>{{ user.USERNAME}}</td>
+                    <td>{{ user.EMAIL}}</td>
+                    <td>{{ user.ISAPPROVED }}</td>
+                  </tr>
+                </tbody>
+                <tfoot class="full-width">
+                  <tr>
+                    <th></th>
+                    <th colspan="4">
+                      <div class="ui right floated small primary labeled icon button">
+                        <i class="user icon"></i> Add User
+                      </div>
+                      <div class="ui small  button">
+                        Approve
+                      </div>
+                      <div class="ui small  disabled button">
+                        Approve All
+                      </div>
+                    </th>
+                  </tr>
+                </tfoot>
+              </table>
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="right floated author">
+            <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> admin
+          </div>
+        </div>
+    </div>
+    
+    <div class="ui card" style="width: fit-content;">
+        <div class="content">
+          <div class="header">ADMIN</div>
+          <div class="meta">
+            <span class="category">Transactions</span>
+          </div>
+          <div class="description">
+            
+            <table class="ui selectable celled table">
+                <thead>
+                  <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        ACCOUNT_NUMBER
+                    </th>
+                    <th>
+                        AMOUNT
+                    </th>
+                    <th>
+                        DATE
+                    </th>
+                    <th>
+                        TYPE
+                    </th>
+                    <th>
+                        TO
+                    </th>
+                    <th>
+                        DESCRIPTION
+                    </th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let transaction of transactions">
+                    <tr>
+                        <td>
+                            {{transaction.ID}}
+                        </td>
+                        <td>
+                            {{transaction.ACCOUNT_NUMBER}}
+                        </td>
+                        <td>
+                            {{transaction.AMOUNT}}
+                        </td>
+                        <td>
+                            {{transaction.TRANSACTION_DATE}}
+                        </td>
+                        <td>
+                            {{transaction.TRANSACTION_TYPE}}
+                        </td>
+            
+                        <td>
+                            {{transaction.TRANSFERED_ACCOUNT_NUMBER}}
+                        </td>
+                        <td>
+                            {{transaction.DESCRIPTION}}
+                        </td>
+                    </tr>
+                </tbody>
+              </table> 
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="right floated author">
+            <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> admin
+          </div>
+        </div>
+    </div>
+    
+    
+    
+</div>

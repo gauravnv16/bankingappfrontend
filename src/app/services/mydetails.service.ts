@@ -24,4 +24,12 @@ export class MydetailsService {
   getData(){
     return this.http.post('http://localhost:8080/accounts',this.fecthUser().ID);
   }
+
+  getTransactions(){
+    return this.http.get('http://localhost:8080/transactions');
+  }
+
+  // getTransaction(){
+  //   return this.http.post('http://localhost:8080/transactions',this.fecthUser().ID);
+  // }
 }
